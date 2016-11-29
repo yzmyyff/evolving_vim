@@ -1,6 +1,9 @@
 set encoding=utf-8 "VIM内部的编码格式.
 set nu
 
+" 使用类似于windows下的快捷键.
+source $VIMRUNTIME/mswin.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -16,8 +19,10 @@ Plugin 'VundleVim/Vundle.vim'
 " All of your Plugins must be added before the following line
 " 是文件树插件.
 Bundle 'scrooloose/nerdtree'
-" 代码检查
+" 代码检查.
 Bundle 'vim-syntastic/syntastic'
+" 括号自动完成.
+Bundle 'Raimondi/delimitMate'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -34,6 +39,7 @@ filetype plugin indent on    " required
 "
 syntax on
 set ts=2
+set sw=2
 
 set expandtab
 set hlsearch

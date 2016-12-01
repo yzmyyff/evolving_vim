@@ -23,6 +23,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'vim-syntastic/syntastic'
 " 括号自动完成.
 Bundle 'Raimondi/delimitMate'
+" 状态栏增强, 最好是有光标位置等信息.
+Plugin 'vim-airline/vim-airline'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -38,10 +40,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 syntax on
-set ts=2
-set sw=2
-
-set expandtab
+autocmd Filetype python setlocal ts=2 sts=2 sw=2
 set hlsearch
 
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif

@@ -18,13 +18,17 @@ Plugin 'VundleVim/Vundle.vim'
 
 " All of your Plugins must be added before the following line
 " 是文件树插件.
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " 代码检查.
-Bundle 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
 " 括号自动完成.
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 " 状态栏增强, 最好是有光标位置等信息.
 Plugin 'vim-airline/vim-airline'
+" 自动处理结尾空白符.
+Plugin 'ntpeters/vim-better-whitespace'
+" 自动补全, 还包括了一堆IDE的特性.
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -63,3 +67,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_pylint_exec = '/usr/bin/pylint3'
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_python_pylint_args='--rcfile=~/google_style.pylint.rc --disable=C0111,R0903,C0301'
+
+" vim-better-whitespace
+autocmd BufWritePre * StripWhitespace

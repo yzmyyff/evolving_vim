@@ -1,9 +1,6 @@
 set encoding=utf-8 "VIM内部的编码格式.
 set nu
 
-" 使用类似于windows下的快捷键.
-source $VIMRUNTIME/mswin.vim
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -70,3 +67,39 @@ let g:syntastic_python_pylint_args='--rcfile=~/google_style.pylint.rc --disable=
 
 " vim-better-whitespace
 autocmd BufWritePre * StripWhitespace
+
+" YouCompleteMe
+let g:ycm_python_binary_path = '/usr/bin/python3'
+
+" 显示右界线.
+set cc=80
+
+
+"""""""""""""""
+"Quickly Run
+""""""""""""""""
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'java'
+        exec "!javac %"
+	exec "!time java %<"
+    elseif &filetype == 'sh'
+        :!time bash %
+    elseif &filetype == 'python'
+        exec "!time python3 %"
+    elseif &filetype == 'html'
+        exec "!firefox % &"
+    elseif &filetype == 'go'
+        exec "!time go run %"
+    elseif &filetype == 'mkd'
+	exec "!~/.vim/markdown.pl % > %.html &"
+        exec "!firefox %.html &"
+    endif
+endfunc

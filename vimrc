@@ -68,8 +68,9 @@ let g:syntastic_python_pylint_args='--rcfile=~/google_style.pylint.rc --disable=
 " vim-better-whitespace
 autocmd BufWritePre * StripWhitespace
 
-" YouCompleteMe
+" YouCompleteMe, 包括快捷键映射.
 let g:ycm_python_binary_path = '/usr/bin/python3'
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " 显示右界线.
 set cc=80

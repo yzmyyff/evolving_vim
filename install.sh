@@ -5,4 +5,4 @@ cp google_style.pylint.rc ~
 cp vimrc ~/.vimrc
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+./install.py --clang-completer # 支持C系补全. 经常下载不下来.

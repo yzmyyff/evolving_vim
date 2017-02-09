@@ -1,4 +1,5 @@
 set encoding=utf-8 "VIM内部的编码格式.
+set fileencodings=utf-8,gbk
 set nu
 
 set nocompatible              " be iMproved, required

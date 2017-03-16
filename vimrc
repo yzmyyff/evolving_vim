@@ -1,5 +1,5 @@
 set encoding=utf-8 "VIM内部的编码格式.
-set fileencodings=utf-8,gbk
+set fileencodings=ucs-bom,utf-8,gbk,latin1
 set nu
 
 set nocompatible              " be iMproved, required
@@ -27,6 +27,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 " 自动补全, 还包括了一堆IDE的特性.
 Plugin 'Valloric/YouCompleteMe'
+" 自动添加方法注释.
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:

@@ -26,6 +26,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 " 自动补全, 还包括了一堆IDE的特性.
 Plugin 'Valloric/YouCompleteMe'
+" 模糊查找.
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:

@@ -6,4 +6,5 @@
 2. 执行install.sh
 
 ## 快捷键
-\jd 跳转到定义.
+1. <leader>jd 跳转到定义.
+2. [count]<leader>c<space> 注释选定行, 或者取消注释.

@@ -1,6 +1,9 @@
 # evolving_vim
 个人用VIM配置. 主要用来写简单的python脚本和C/C++代码.
 
+## 依赖
+需要确认GCC/g++的版本在5.3+
+
 ## 安装方法
 1. 将容器clone到本地.
 2. 执行install.sh

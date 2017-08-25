@@ -31,6 +31,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 " 自动添加方法注释.
 Plugin 'scrooloose/nerdcommenter'
+" 大纲式导航
+Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -76,6 +78,9 @@ autocmd BufWritePre * StripWhitespace
 " YouCompleteMe, 包括快捷键映射.
 let g:ycm_python_binary_path = '/usr/bin/python3'
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" 使用F8打开大纲导航
+nmap <F8> :TagbarToggle<CR>
 
 " 显示右界线.
 set cc=80

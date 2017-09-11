@@ -1,6 +1,7 @@
 set encoding=utf-8 "VIM内部的编码格式.
 set fileencodings=ucs-bom,utf-8,gbk,latin1
 set nu
+set pastetoggle=<F9> "在复制代码前用来控制换行格式化.
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -68,7 +69,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_exec = '/usr/bin/pylint3'
+let g:syntastic_python_pylint_exec = '/usr/local/bin/pylint'
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_python_pylint_args='--rcfile=~/google_style.pylint.rc --disable=C0111,R0903,C0301'
 

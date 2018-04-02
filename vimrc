@@ -55,8 +55,7 @@ set hlsearch
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " nerdtree配置
-set <m-1>=alt-1
-map <m-1> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 " 如果退出时只有nerd tree就自动退出.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 

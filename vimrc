@@ -73,6 +73,9 @@ let g:syntastic_python_pylint_exec = '/usr/local/bin/pylint'
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_python_pylint_args='--rcfile=~/google_style.pylint.rc --disable=C0111,R0903,C0301'
 
+" airline状态栏
+let g:airline_powerline_fonts = 1
+
 " vim-better-whitespace
 autocmd BufWritePre * StripWhitespace
 

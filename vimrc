@@ -1,6 +1,6 @@
 set encoding=utf-8 "VIM内部的编码格式.
 set fileencodings=ucs-bom,utf-8,gbk,latin1
-set nu
+set nu rnu
 set pastetoggle=<F9> "在复制代码前用来控制换行格式化.
 
 set nocompatible              " be iMproved, required
